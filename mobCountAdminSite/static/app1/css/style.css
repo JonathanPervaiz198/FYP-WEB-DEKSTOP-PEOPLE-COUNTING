@@ -1,0 +1,22 @@
+.sidebar {
+    background-color: rgb(49, 49, 54);
+    height: 930px;
+}
+
+li {
+    list-style-type: none;
+    color: white;
+}
+
+.sidebar-item {
+    list-style-type: none;
+}
+
+h2 {
+    color: white;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}

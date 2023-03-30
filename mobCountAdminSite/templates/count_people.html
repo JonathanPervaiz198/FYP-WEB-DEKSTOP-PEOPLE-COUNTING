@@ -1,0 +1,22 @@
+{% extends 'dashboard.html' %}
+<script>
+    console.log("Uploaded Image URL: " + "{{ uploaded_image_url }}");
+</script>
+
+{% block main %}
+<div class="col-md-10 main">
+    <h1>Count People</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="image">Upload Image:</label>
+            <input type="file" class="form-control-file" name="image" id="image">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if count %}
+    <p>Number of people in the image: {{ count }}</p>
+    {% endif %}
+    <img src="file:///E:/media/image1.jpg" alt="Uploaded Image">
+</div>
+{% endblock %}
